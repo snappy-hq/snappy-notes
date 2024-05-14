@@ -1035,8 +1035,8 @@
     },
     {
       "type": "rectangle",
-      "version": 168,
-      "versionNonce": 187223142,
+      "version": 204,
+      "versionNonce": 155770216,
       "index": "an",
       "isDeleted": false,
       "id": "Cbgt6FjQ082n1Vv6XBr3h",
@@ -1051,7 +1051,7 @@
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
       "width": 1056.9934041863867,
-      "height": 440.87689531352936,
+      "height": 599.0317791008351,
       "seed": 1091143566,
       "groupIds": [],
       "frameId": null,
@@ -1064,14 +1064,14 @@
           "type": "arrow"
         }
       ],
-      "updated": 1715531898462,
+      "updated": 1715706937423,
       "link": null,
       "locked": false
     },
     {
       "type": "text",
-      "version": 910,
-      "versionNonce": 175994899,
+      "version": 1594,
+      "versionNonce": 551953256,
       "index": "ao",
       "isDeleted": false,
       "id": "DhskGhVqFzC2dvJ8Xl1uy",
@@ -1082,26 +1082,26 @@
       "opacity": 100,
       "angle": 0,
       "x": 2179.3875327439946,
-      "y": 799.8439201475292,
+      "y": 800.540637697253,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
       "width": 971,
-      "height": 250,
+      "height": 375,
       "seed": 1298427026,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715619255164,
+      "updated": 1715708523798,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js",
+      "text": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js",
+      "originalText": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch",
       "lineHeight": 1.25
     },
     {
@@ -1172,8 +1172,8 @@
     },
     {
       "type": "text",
-      "version": 171,
-      "versionNonce": 1474030906,
+      "version": 404,
+      "versionNonce": 252908392,
       "index": "ax",
       "isDeleted": false,
       "id": "eYpxanmPdWRFmk-ABb0gE",
@@ -1183,12 +1183,12 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 2385.3187032547567,
-      "y": 630.6331768570176,
+      "x": 2193.024659530984,
+      "y": 625.7970699039795,
       "strokeColor": "#f08c00",
       "backgroundColor": "#ffc9c9",
-      "width": 152,
-      "height": 40,
+      "width": 245,
+      "height": 65,
       "seed": 1192036838,
       "groupIds": [],
       "frameId": null,
@@ -1199,10 +1199,10 @@
           "type": "arrow"
         }
       ],
-      "updated": 1715531905620,
+      "updated": 1715707157432,
       "link": null,
       "locked": false,
-      "fontSize": 32,
+      "fontSize": 52,
       "fontFamily": 1,
       "text": "worked on",
       "textAlign": "left",
@@ -1213,8 +1213,8 @@
     },
     {
       "type": "arrow",
-      "version": 217,
-      "versionNonce": 278488762,
+      "version": 871,
+      "versionNonce": 44259688,
       "index": "ay",
       "isDeleted": false,
       "id": "vf1u3u9fAcrvKKKdZ3plw",
@@ -1224,12 +1224,12 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 2547.6463714449983,
-      "y": 659.9749867575979,
+      "x": 2439.024659530984,
+      "y": 671.0170743879337,
       "strokeColor": "#f08c00",
       "backgroundColor": "#ffc9c9",
-      "width": 47.473185980165,
-      "height": 80.91849302109301,
+      "width": 151.76993189603354,
+      "height": 69.8764053907571,
       "seed": 1171594662,
       "groupIds": [],
       "frameId": null,
@@ -1237,17 +1237,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1715531905620,
+      "updated": 1715707157432,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "eYpxanmPdWRFmk-ABb0gE",
-        "focus": -0.8501857491802582,
-        "gap": 10.327668190241639
+        "focus": -0.35330169004631284,
+        "gap": 1
       },
       "endBinding": {
         "elementId": "Cbgt6FjQ082n1Vv6XBr3h",
-        "focus": 0.04430190521032818,
+        "focus": 0.39840868362571213,
         "gap": 14.153008267773544
       },
       "lastCommittedPoint": null,
@@ -1259,19 +1259,19 @@
           0
         ],
         [
-          27.565075730418357,
-          33.44530704092813
+          88.11327671348954,
+          26.583524708935215
         ],
         [
-          47.473185980165,
-          80.91849302109301
+          151.76993189603354,
+          69.8764053907571
         ]
       ]
     },
     {
       "type": "embeddable",
-      "version": 185,
-      "versionNonce": 1317322483,
+      "version": 186,
+      "versionNonce": 1941896216,
       "index": "az",
       "isDeleted": false,
       "id": "SxH_c4YSqGX6Xx02pYwPq",
@@ -1293,10 +1293,132 @@
       "roundness": {
         "type": 3
       },
-      "boundElements": [],
-      "updated": 1715619207218,
+      "boundElements": [
+        {
+          "id": "gsT0RGVr5rhZ8vdaNzVhO",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1715707086497,
       "link": "https://konvajs.org/",
       "locked": false
+    },
+    {
+      "type": "embeddable",
+      "version": 525,
+      "versionNonce": 234958440,
+      "index": "b00",
+      "isDeleted": false,
+      "id": "CdzsluWq9JxzLRe3aW8Lk",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0.013887995930986108,
+      "x": 2698.8239162707505,
+      "y": 1103.8083233608488,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "width": 110.7873625042671,
+      "height": 20.15676639031198,
+      "seed": 1232967784,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "updated": 1715707058913,
+      "link": "https://www.npmjs.com/package/react-canvas-draw",
+      "locked": false
+    },
+    {
+      "type": "embeddable",
+      "version": 67,
+      "versionNonce": 2130683496,
+      "index": "b01",
+      "isDeleted": false,
+      "id": "lfxSM2zNdpMPOXkbTXoqI",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 3081.9223586658036,
+      "y": 1150.409755798095,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "width": 86.39297616575323,
+      "height": 22.991679140885925,
+      "seed": 917856280,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "updated": 1715707039357,
+      "link": "https://bansalsurya.medium.com/making-a-whiteboard-application-with-reactjs-862b9f320850",
+      "locked": false
+    },
+    {
+      "type": "arrow",
+      "version": 615,
+      "versionNonce": 1805979416,
+      "index": "b02",
+      "isDeleted": false,
+      "id": "gsT0RGVr5rhZ8vdaNzVhO",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 2846.4318268591546,
+      "y": 1139.9589925522373,
+      "strokeColor": "#2f9e44",
+      "backgroundColor": "transparent",
+      "width": 312.8261798259923,
+      "height": 103.11419735912432,
+      "seed": 121487896,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1715707111983,
+      "link": null,
+      "locked": false,
+      "startBinding": null,
+      "endBinding": {
+        "elementId": "SxH_c4YSqGX6Xx02pYwPq",
+        "focus": -0.6232635803680715,
+        "gap": 8.395269896932405
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          287.0476304862109,
+          -18.81137384254248
+        ],
+        [
+          279.3837374392492,
+          -87.78641126520029
+        ],
+        [
+          -25.77854933978142,
+          -103.11419735912432
+        ]
+      ]
     }
   ],
   "appState": {
