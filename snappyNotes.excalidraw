@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 412,
-      "versionNonce": 1142813734,
+      "version": 413,
+      "versionNonce": 235418800,
       "index": "a0",
       "isDeleted": false,
       "id": "EAcDiqsuyEkqU0nYHRYuF",
@@ -27,7 +27,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530787584,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 51.19999999999996,
@@ -37,6 +37,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Snappy notes",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -76,8 +77,8 @@
     },
     {
       "type": "text",
-      "version": 477,
-      "versionNonce": 1216872792,
+      "version": 478,
+      "versionNonce": 1564913232,
       "index": "a2",
       "isDeleted": false,
       "id": "Cdq7SKtKgCJjHzToWLBNe",
@@ -98,7 +99,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715080736527,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -108,6 +109,7 @@
       "verticalAlign": "middle",
       "containerId": "fPhJI3_N6cduqEYfVuvjo",
       "originalText": "Front End",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -147,8 +149,8 @@
     },
     {
       "type": "text",
-      "version": 551,
-      "versionNonce": 2121000792,
+      "version": 552,
+      "versionNonce": 41819824,
       "index": "a4",
       "isDeleted": false,
       "id": "gweHKCNqFa7Lv50SCKy_s",
@@ -169,7 +171,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715080718695,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -179,6 +181,7 @@
       "verticalAlign": "middle",
       "containerId": "3KEwXRqd26D1UMWDbK8Y3",
       "originalText": "Back End",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -222,8 +225,8 @@
     },
     {
       "type": "text",
-      "version": 865,
-      "versionNonce": 892654168,
+      "version": 866,
+      "versionNonce": 50095184,
       "index": "a6",
       "isDeleted": false,
       "id": "Zc_ouij4uHLpUAHPYUtvj",
@@ -244,7 +247,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715080751459,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -254,6 +257,7 @@
       "verticalAlign": "middle",
       "containerId": "5QRLEx5kFj4IxiLKUFewk",
       "originalText": "Idea ref",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -350,8 +354,8 @@
     },
     {
       "type": "text",
-      "version": 468,
-      "versionNonce": 201804090,
+      "version": 469,
+      "versionNonce": 78039216,
       "index": "a9",
       "isDeleted": false,
       "id": "v2PAXYloX8hzbmecooTuG",
@@ -372,7 +376,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530787587,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -382,6 +386,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Reference \n1. Excelllidraw for the drawing experienec\n2. One note for the notebook oraginsations\n3. \n\nFeatures\n1. Will be able to create notebooks and in the \nnotebooks there must be option to create \nmultiple pages\n2. Will be able to export the whole notebook as \npdf",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -421,8 +426,8 @@
     },
     {
       "type": "text",
-      "version": 891,
-      "versionNonce": 1831027046,
+      "version": 892,
+      "versionNonce": 344676944,
       "index": "aD",
       "isDeleted": false,
       "id": "702zupf-uTbsjrxuaDHfm",
@@ -443,7 +448,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530849127,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 32.31626279064062,
@@ -453,6 +458,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "1. Reference Videos :",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -535,8 +541,8 @@
     },
     {
       "type": "text",
-      "version": 368,
-      "versionNonce": 777429434,
+      "version": 369,
+      "versionNonce": 1344942768,
       "index": "aS",
       "isDeleted": false,
       "id": "5xp4h5w2aju941EI2AWkj",
@@ -557,7 +563,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530810480,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20.19766424415039,
@@ -567,6 +573,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "TipTap",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -685,8 +692,8 @@
     },
     {
       "type": "text",
-      "version": 967,
-      "versionNonce": 1522036730,
+      "version": 968,
+      "versionNonce": 1154191440,
       "index": "aV",
       "isDeleted": false,
       "id": "xpPEdq7x2AC_rI3gh5Bip",
@@ -709,7 +716,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530849127,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 32,
@@ -719,6 +726,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Rich text editor:",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -866,8 +874,8 @@
     },
     {
       "type": "text",
-      "version": 207,
-      "versionNonce": 1107579046,
+      "version": 208,
+      "versionNonce": 1806720176,
       "index": "ac",
       "isDeleted": false,
       "id": "XQrFWCRZruxYSKpmWpcjw",
@@ -888,7 +896,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715530810480,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -898,6 +906,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "ProseMirror",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -937,8 +946,8 @@
     },
     {
       "type": "text",
-      "version": 1424,
-      "versionNonce": 195228858,
+      "version": 1425,
+      "versionNonce": 731186768,
       "index": "ak",
       "isDeleted": false,
       "id": "yOEax4zLw0a9ZzUrweVQD",
@@ -964,7 +973,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1715530810480,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -974,6 +983,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "Tiptap is a part of ProseMirror, but\nmuch faster and customizable. Further \nit uses the ProseMirror API. Unlike \nProseMirror , tiptap is easy to use and \neasy to learn. It also provide a lot of\nExtensions for free ",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -1070,8 +1080,8 @@
     },
     {
       "type": "text",
-      "version": 1594,
-      "versionNonce": 551953256,
+      "version": 1679,
+      "versionNonce": 325819472,
       "index": "ao",
       "isDeleted": false,
       "id": "DhskGhVqFzC2dvJ8Xl1uy",
@@ -1086,22 +1096,23 @@
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
       "width": 971,
-      "height": 375,
+      "height": 425,
       "seed": 1298427026,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715708523798,
+      "updated": 1715873861311,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch",
+      "text": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch\n--16/5/23--\n* research on react canvasDraw ",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch",
+      "originalText": "--12/5/23--\n* Custom text editor using (  HTML-editable  ||  reactJS ) instade of tiptap or other JS librarys\n* partial text selection using window.getSelection working function check\n* custom toolbar and ribbon idea and design\n* current text update using addEventListener keyup event and chatgpt generated code\n* text indentation , bold , italic , list item creation & other working functions checked\n\n--13/5/23--\n* drawing canvas from scratch using html5 Canvas\n* react library for canvas - konva react js\n--14/5/23--\n* react library for smooth drawing painting , loading animation( less features , less customizable,\n    old/not supporting scripts) - react-canvas-draw \n* konva - react library , customizable and prefered useful featres\n* html 5 canvas with api and roughJS , customizable , multifunctional canvas from scratch\n--16/5/23--\n* research on react canvasDraw ",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
@@ -1136,8 +1147,8 @@
     },
     {
       "type": "text",
-      "version": 510,
-      "versionNonce": 1286961853,
+      "version": 511,
+      "versionNonce": 633322576,
       "index": "av",
       "isDeleted": false,
       "id": "MkR_aHYqkSbsVRUsuqC-f",
@@ -1158,7 +1169,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1715618967189,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 95.84995274353716,
@@ -1168,12 +1179,13 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "X   IDEA CANCELED",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 404,
-      "versionNonce": 252908392,
+      "version": 405,
+      "versionNonce": 1684336816,
       "index": "ax",
       "isDeleted": false,
       "id": "eYpxanmPdWRFmk-ABb0gE",
@@ -1199,7 +1211,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1715707157432,
+      "updated": 1715869652380,
       "link": null,
       "locked": false,
       "fontSize": 52,
@@ -1209,6 +1221,7 @@
       "verticalAlign": "top",
       "containerId": null,
       "originalText": "worked on",
+      "autoResize": true,
       "lineHeight": 1.25
     },
     {
