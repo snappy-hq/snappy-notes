@@ -1,9 +1,16 @@
 "use client";
 
-import { useEditor, EditorContent, generateHTML } from "@tiptap/react";
+import { EditorContent, generateHTML, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import React from "react";
 import { Button } from "../ui/button";
+import { Bold, Italic, Printer, Redo, Undo } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 const Tiptap = () => {
   const editor = useEditor({
@@ -13,26 +20,50 @@ const Tiptap = () => {
   });
 
   return (
-    <React.Fragment>
-      <Button onClick={() => editor?.chain().focus().toggleBold().run()}>
-        Bold
-      </Button>
-      <Button onClick={() => editor?.chain().focus().toggleItalic().run()}>
-        Italic
-      </Button>
-      <Button onClick={() => editor?.chain().focus().undo().run()}>Undo</Button>
-      <Button onClick={() => editor?.chain().focus().redo().run()}>Redo</Button>
-      <Button
-        onClick={() => {
-          console.log(editor?.getHTML());
-          console.log(generateHTML(editor?.getJSON()!, [StarterKit]));
-        }}
-      >
-        Print the html
-      </Button>
-      <EditorContent editor={editor} controls={true} />
-      {/* <textarea id="editor-input" /> */}
-    </React.Fragment>
+    <main className="p-4">
+      <nav className="flex gap-3 my-3 px-2 py-1">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <Button
+                size={"icon"}
+                onClick={() => editor?.chain().focus().toggleBold().run()}
+              >
+                <Bold />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Make it bold</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <Button
+          size={"icon"}
+          onClick={() => editor?.chain().focus().toggleItalic().run()}
+        >
+          <Italic />
+        </Button>
+        <Button
+          size={"icon"}
+          onClick={() => editor?.chain().focus().undo().run()}
+        >
+          <Undo />
+        </Button>
+        <Button
+          size={"icon"}
+          onClick={() => editor?.chain().focus().redo().run()}
+        >
+          <Redo />
+        </Button>
+        <Button
+          onClick={() => {
+            console.log(editor?.getHTML());
+            console.log(generateHTML(editor?.getJSON()!, [StarterKit]));
+          }}
+        >
+          <Printer /> Print the html
+        </Button>
+      </nav>
+      <EditorContent className="px-2 py-1" editor={editor} controls={true} />
+    </main>
   );
 };
 
