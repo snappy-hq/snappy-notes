@@ -11,8 +11,11 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "@tiptap/extension-code": "^2.4.0",
+    "@tiptap/extension-code-block": "^2.4.0",
     "@tiptap/extension-color": "^2.4.0",
     "@tiptap/extension-document": "^2.4.0",
+    "@tiptap/extension-heading": "^2.4.0",
     "@tiptap/extension-highlight": "^2.4.0",
     "@tiptap/extension-paragraph": "^2.4.0",
     "@tiptap/extension-task-item": "^2.4.0",
@@ -30,6 +33,7 @@
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.77.6",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -1,88 +1,7 @@
 "use client";
 
-// import { EditorContent, generateHTML, useEditor } from "@tiptap/react";
-// import StarterKit from "@tiptap/starter-kit";
-// import React, { useState } from "react";
-// import { Button } from "../ui/button";
-// import { Bold, Italic, Printer, Redo, Undo } from "lucide-react";
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipProvider,
-//   TooltipTrigger,
-// } from "../ui/tooltip";
-
-// const Tiptap = () => {
-//   const [markdown, setMarkdown] = useState("");
-//   const editor = useEditor({
-//     extensions: [StarterKit],
-//     content: "# Hello World! 🌎️",
-//     injectCSS: false,
-//     editorProps: {
-//       attributes: {
-//         class: 'prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl m-5 focus:outline-none',
-//       },
-//     },
-//     onUpdate: ({ editor }) => {
-//       const markdownContent = editor.getHTML();
-//       setMarkdown(markdownContent);
-//     },
-//   });
-
-//   return (
-//     <main className="p-4">
-//       <nav className="flex gap-3 my-3 px-2 py-1">
-//         <TooltipProvider>
-//           <Tooltip>
-//             <TooltipTrigger>
-//               <Button
-//                 size={"icon"}
-//                 onClick={() => editor?.chain().focus().toggleBold().run()}
-//               >
-//                 <Bold />
-//               </Button>
-//             </TooltipTrigger>
-//             <TooltipContent>Make it bold</TooltipContent>
-//           </Tooltip>
-//         </TooltipProvider>
-//         <Button
-//           size={"icon"}
-//           onClick={() => editor?.chain().focus().toggleItalic().run()}
-//         >
-//           <Italic />
-//         </Button>
-//         <Button
-//           size={"icon"}
-//           onClick={() => editor?.chain().focus().undo().run()}
-//         >
-//           <Undo />
-//         </Button>
-//         <Button
-//           size={"icon"}
-//           onClick={() => editor?.chain().focus().redo().run()}
-//         >
-//           <Redo />
-//         </Button>
-//         <Button
-//           onClick={() => {
-//             console.log(editor?.getHTML());
-//             console.log(generateHTML(editor?.getJSON()!, [StarterKit]));
-//           }}
-//         >
-//           <Printer /> Print the html
-//         </Button>
-//       </nav>
-//       <EditorContent className="px-2 py-1" editor={editor} controls={true} />
-//     </main>
-//   );
-// };
-
-// export default Tiptap;
-
+import { Color } from "@tiptap/extension-color";
 import TextAlign from "@tiptap/extension-text-align";
-import Text from "@tiptap/extension-text";
-import Document from '@tiptap/extension-document'
-import Paragraph from '@tiptap/extension-paragraph'
 import Highlight from "@tiptap/extension-highlight";
 import {
   BubbleMenu,
@@ -94,6 +13,11 @@ import {
 import StarterKit from "@tiptap/starter-kit";
 import React from "react";
 import { Button } from "../ui/button";
+import { Printer } from "lucide-react";
+import Paragraph from "@tiptap/extension-paragraph";
+import Heading from "@tiptap/extension-heading";
+import CodeBlock from "@tiptap/extension-code-block";
+import Code from "@tiptap/extension-code";
 
 const MenuBar = ({ editor }: { editor: Editor }) => {
   if (!editor) {
@@ -191,6 +115,13 @@ const MenuBar = ({ editor }: { editor: Editor }) => {
         >
           Justify
         </Button>
+        <Button
+          onClick={() => {
+            console.log(editor?.getHTML());
+          }}
+        >
+          <Printer /> Print the html
+        </Button>
       </div>
     </div>
   );
@@ -199,51 +130,61 @@ const MenuBar = ({ editor }: { editor: Editor }) => {
 export default () => {
   const editor = useEditor({
     extensions: [
-      Document,
       StarterKit,
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),
       Highlight,
-      Paragraph,
-      Text,
+      Paragraph.configure({
+        HTMLAttributes: {
+          class: "tiptap__para",
+        },
+      }),
+      Heading.configure({
+        HTMLAttributes: {
+          class: "tiptap__heading",
+        },
+      }),
+      Code,
+      CodeBlock,
+      Color,
     ],
     content: `
-      <h3 style="text-align:center">
-        Devs Just Want to Have Fun by Cyndi Lauper
-      </h3>
-      <p style="text-align:center">
-        I come home in the morning light<br>
-        My mother says, <mark>“When you gonna live your life right?”</mark><br>
-        Oh mother dear we’re not the fortunate ones<br>
-        And devs, they wanna have fun<br>
-        Oh devs just want to have fun</p>
-      <p style="text-align:center">
-        The phone rings in the middle of the night<br>
-        My father yells, "What you gonna do with your life?"<br>
-        Oh daddy dear, you know you’re still number one<br>
-        But <s>girls</s>devs, they wanna have fun<br>
-        Oh devs just want to have
-      </p>
-      <p style="text-align:center">
-        That’s all they really want<br>
-        Some fun<br>
-        When the working day is done<br>
-        Oh devs, they wanna have fun<br>
-        Oh devs just wanna have fun<br>
-        (devs, they wanna, wanna have fun, devs wanna have)
-      </p>
+    <h2>
+      Hi there,
+    </h2>
+    <p>
+      this is a <em>basic</em> example of <strong>Tiptap</strong>. <mark>Sure, there are all kind of basic text styles you’d probably expect from a text editor.</mark> But wait until you see the lists:
+    </p>
+    <ul>
+      <li>
+        That’s a bullet list with one …
+      </li>
+      <li>
+        … or two list items.
+      </li>
+    </ul>
+    <p>
+      Isn’t that great? And all of that is editable. But wait, there’s more. Let’s try a code block:
+    </p>
+    <pre><code class="language-css">body {
+display: none;
+}</code></pre>
+    <p>
+      I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
+    </p>
+    <blockquote>
+      Wow, that’s amazing. Good work, boy! 👏
+      <br />
+      — Mom
+    </blockquote>
     `,
   });
 
   return (
     <>
       {editor && (
-        <BubbleMenu
-          className="bubble-menu"
-          tippyOptions={{ duration: 100 }}
-          editor={editor}
-        >
+        <BubbleMenu tippyOptions={{ duration: 100 }} editor={editor}>
           <Button
             onClick={() => editor.chain().focus().toggleBold().run()}
             className={editor.isActive("bold") ? "is-active" : ""}
@@ -300,7 +241,7 @@ export default () => {
         </FloatingMenu>
       )}
       <MenuBar editor={editor!} />
-      <EditorContent editor={editor} />
+      <EditorContent editor={editor} controls contextMenu="default" />
     </>
   );
 };
