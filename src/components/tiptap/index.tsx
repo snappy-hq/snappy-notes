@@ -108,7 +108,7 @@ const MenuBar = ({ editor }: { editor: Editor }) => {
           Right
         </Button>
         <Button
-          onClick={() => editor.chain().focus().setTextAlign("justify").run()}
+          onClick={() => editor.chain().focus().setTextAlign("center-justify").run()}
           className={
             editor.isActive({ textAlign: "justify" }) ? "is-active" : ""
           }
@@ -138,7 +138,7 @@ export default () => {
       Paragraph.configure({
         HTMLAttributes: {
           class: "tiptap__para",
-        },
+        },        
       }),
       Heading.configure({
         HTMLAttributes: {
