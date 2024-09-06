@@ -1,0 +1,8 @@
+build
+dist
+.next
+node_modules
+coverage
+.vscode
+.idea
+*.log
