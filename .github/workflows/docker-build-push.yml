@@ -36,7 +36,7 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${{ secrets.DOCKER_REGISTRY }} -u ${{ vars.DOCKER_USERNAME }} --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_REGISTRY }}/snappy-notes:latest .
+        run: docker build -t ${{ vars.DOCKER_REGISTRY }}/snappy-notes:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_REGISTRY }}/snappy-notes:latest
+        run: docker push ${{ vars.DOCKER_REGISTRY }}/snappy-notes:latest
