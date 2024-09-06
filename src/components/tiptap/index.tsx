@@ -14,7 +14,7 @@ import { BubbleMenuTipTap } from "./bubblemenu";
 import { FloatingMenuTipTap } from "./floatingmenu";
 import { content } from "./defaultcontent";
 
-const TipTap =  () => {
+const TipTap = () => {
   const editor = useEditor({
     extensions: [
       StarterKit,
