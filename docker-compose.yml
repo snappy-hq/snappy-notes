@@ -1,0 +1,48 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres_db
+      - mongo_db
+    ports:
+      - "80:3000"
+    networks:
+      - snappy-network
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://snappy:snappy_postgres@postgres_db:5432/snappy-notes
+      MONGO_URL: mongodb://mongo_db:27017/snappy-notes
+  postgres_db:
+    image: postgres:15-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - snappy-network
+    environment:
+      POSTGRES_DB: snappy-notes
+      POSTGRES_USER: snappy
+      POSTGRES_PASSWORD: snappy_postgres
+  mongo_db:
+    image: mongo:4.0-xenial
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - snappy-network
+
+volumes:
+  pgdata:
+  mongo_data:
+    
+networks:
+  snappy-network:
+    driver: bridge
