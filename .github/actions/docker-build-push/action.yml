@@ -9,7 +9,7 @@ inputs:
     description: 'Docker password'
     required: true
   docker_registry:
-    description: 'Docker registry URL'
+    description: 'Docker registry URL (e.g., docker.io for Docker Hub)'
     required: true
   repository:
     description: 'Repository name for Docker image'
@@ -17,13 +17,11 @@ inputs:
 
 runs:
   using: 'composite'
-
+  
   steps:
-		- name: Checkout code
-			uses: actions/checkout@v3
-
     - name: Log in to Docker
-      run: echo "${{ inputs.docker_password }}" | docker login -u ${{ inputs.docker_username }} --password-stdin
+      run: |
+        echo "${{ inputs.docker_password }}" | docker login -u ${{ inputs.docker_username }} --password-stdin
 
     - name: Build Docker image
       run: |
