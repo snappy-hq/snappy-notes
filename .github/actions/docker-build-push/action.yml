@@ -22,13 +22,16 @@ runs:
     - name: Log in to Docker
       run: |
         echo "${{ inputs.docker_password }}" | docker login -u ${{ inputs.docker_username }} --password-stdin
+      shell: bash
 
     - name: Build Docker image
       run: |
         VERSION=$(git rev-list --count HEAD)
         docker build -t ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION} .
+      shell: bash
 
     - name: Push Docker image
       run: |
         VERSION=$(git rev-list --count HEAD)
         docker push ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION}
+      shell: bash
