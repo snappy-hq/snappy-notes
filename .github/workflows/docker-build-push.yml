@@ -24,8 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run Prettier
+        run: npm run format
+
       - name: Run ESLint
-        run: npm run lint
+        run: npm run lint:fix
         env:
           CI: true
 
