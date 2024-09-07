@@ -2,7 +2,7 @@ import { Editor } from "@tiptap/react";
 import { Printer } from "lucide-react";
 import { Button } from "../ui/button";
 
-export const MenuBar = ({ editor }: { editor: Editor }) => {
+export const MenuBar = ({ editor }: { editor?: Editor }) => {
   if (!editor) {
     return null;
   }

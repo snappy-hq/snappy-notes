@@ -28,6 +28,11 @@ jobs:
         run: npm run lint
         env:
           CI: true
+
+      - name: Run unit tests
+        run: npm run test
+        env:
+          CI: true
       
       - name: Build the Next.js app
         run: npm run build

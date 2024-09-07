@@ -14,7 +14,7 @@ import { BubbleMenuTipTap } from "./bubblemenu";
 import { FloatingMenuTipTap } from "./floatingmenu";
 import { content } from "./defaultcontent";
 
-const TipTap = () => {
+export function MDEditor() {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -37,16 +37,15 @@ const TipTap = () => {
       Color,
     ],
     content,
+    enableCoreExtensions: true,
   });
 
   return (
-    <>
+    <div>
       {editor && <BubbleMenuTipTap editor={editor} />}
       {editor && <FloatingMenuTipTap editor={editor} />}
-      <MenuBar editor={editor!} />
+      {editor && <MenuBar editor={editor} />}
       <EditorContent editor={editor} controls contextMenu="default" />
-    </>
+    </div>
   );
-};
-
-export default TipTap;
+}
