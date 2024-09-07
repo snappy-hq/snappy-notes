@@ -4,7 +4,6 @@ import { MDEditor } from "../index";
 import { MenuBar } from "../menubar";
 
 describe("MDEditor component test with all necessary sub-components", () => {
-
   it("renders the component correctly", () => {
     render(<MDEditor />);
   });
@@ -12,7 +11,6 @@ describe("MDEditor component test with all necessary sub-components", () => {
   it("should not render the menubar without the editor context", () => {
     const { container } = render(<MenuBar />);
 
-    expect(container.hasChildNodes()).toBeFalsy()
+    expect(container.hasChildNodes()).toBeFalsy();
   });
-
 });
