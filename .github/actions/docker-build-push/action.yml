@@ -17,10 +17,8 @@ inputs:
 
 runs:
   using: 'composite'
+	
   steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
     - name: Log in to Docker
       run: echo "${{ inputs.docker_password }}" | docker login -u ${{ inputs.docker_username }} --password-stdin
 
