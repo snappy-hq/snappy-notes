@@ -11,6 +11,11 @@ const config: Config = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   preset: "ts-jest",
   verbose: true,
+  testPathIgnorePatterns: [
+    "<rootDir>/.next/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/actions-runner/",
+  ],
 };
 
 export default createJestConfig(config);
