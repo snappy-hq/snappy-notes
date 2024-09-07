@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Build and Push Docker Image
-        uses: ./actions/hello-world-action
+        uses: ./.github/actions/docker-build-push
         with:
           docker_username: ${{ vars.DOCKER_USERNAME }}
           docker_password: ${{ secrets.DOCKER_PASSWORD }}
