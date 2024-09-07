@@ -1,0 +1,35 @@
+name: 'Build and Push Docker Image'
+description: 'Builds and pushes a Docker image with a version tag.'
+
+inputs:
+  docker_username:
+    description: 'Docker username'
+    required: true
+  docker_password:
+    description: 'Docker password'
+    required: true
+  docker_registry:
+    description: 'Docker registry URL'
+    required: true
+  repository:
+    description: 'Repository name for Docker image'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Log in to Docker
+      run: echo "${{ inputs.docker_password }}" | docker login -u ${{ inputs.docker_username }} --password-stdin
+
+    - name: Build Docker image
+      run: |
+        VERSION=$(git rev-list --count HEAD)
+        docker build -t ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION} .
+
+    - name: Push Docker image
+      run: |
+        VERSION=$(git rev-list --count HEAD)
+        docker push ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION}
