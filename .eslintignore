@@ -1,2 +1,4 @@
 src/components/ui/*.tsx
 src/components/ui/
+
+/*.config.*

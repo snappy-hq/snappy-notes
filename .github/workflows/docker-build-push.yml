@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  HUSKY: 0
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Format the codebase
-        run: npm run format
-
       - name: Run ESLint
         run: npm run lint
         env:
@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Log in to Docker
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${{ secrets.DOCKER_REGISTRY }} -u ${{ vars.DOCKER_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ vars.DOCKER_USERNAME }} --password-stdin
 
       - name: Build Docker image
         run: docker build -t ${{ vars.DOCKER_REGISTRY }}/snappy-notes:latest .
