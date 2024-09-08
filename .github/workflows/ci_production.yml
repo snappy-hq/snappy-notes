@@ -1,0 +1,56 @@
+name: CI_PROD
+
+on:
+  workflow_run:
+    workflows: ["CI_DEV"]
+    types:
+      - completed
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  HUSKY: 0
+
+jobs:
+  lint-format-test:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    environment: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.11.0"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests and lint
+        uses: ./github/actions/tests
+        with:
+          silent_test: true
+          fix_lint: true
+
+  build-and-push:
+    needs: lint-format-test
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build and Push Docker Image
+        uses: ./.github/actions/docker-build-push
+        with:
+          docker_username: ${{ vars.DOCKER_USERNAME }}
+          docker_password: ${{ secrets.DOCKER_PASSWORD }}
+          docker_registry: ${{ vars.DOCKER_REGISTRY }}
+          repository: snappy-notes
