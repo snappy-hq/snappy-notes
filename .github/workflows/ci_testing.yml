@@ -1,0 +1,42 @@
+name: CI_DEV
+
+on:
+  workflow_dispatch: 
+  push:
+    branches:
+      - dev
+      - dev-*
+      - staging
+      - staging-*
+    branches-ignore:
+      - master
+  pull_request:
+    branches:
+      - dev
+      - dev-*
+      - staging
+      - stagin-*
+
+jobs:
+  lint-format-test:
+    runs-on: ubuntu-latest
+    environment: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.11.0"
+
+      - name: Install dependencies
+        run: npm install
+        shell: bash
+
+      - name: Testing and linting
+        uses: ./github/actions/tests
+        with:
+          silent_test: false
+          fix_lint: false
