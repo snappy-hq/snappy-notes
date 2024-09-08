@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Run tests and lint
-        uses: ./github/actions/tests
+        uses: ./.github/actions/tests
         with:
           silent_test: true
           fix_lint: true
