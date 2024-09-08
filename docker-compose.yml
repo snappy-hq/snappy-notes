@@ -16,6 +16,7 @@ services:
       NODE_ENV: production
       DATABASE_URL: postgres://snappy:snappy_postgres@postgres_db:5432/snappy-notes
       MONGO_URL: mongodb://mongo_db:27017/snappy-notes
+
   postgres_db:
     image: postgres:15-alpine
     restart: always
@@ -29,6 +30,7 @@ services:
       POSTGRES_DB: snappy-notes
       POSTGRES_USER: snappy
       POSTGRES_PASSWORD: snappy_postgres
+
   mongo_db:
     image: mongo:4.0-xenial
     restart: always
