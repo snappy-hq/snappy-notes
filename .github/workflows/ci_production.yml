@@ -1,10 +1,6 @@
 name: CI_PROD
 
 on:
-  workflow_run:
-    workflows: ["CI_DEV"]
-    types:
-      - completed
   push:
     branches:
       - master
@@ -17,9 +13,8 @@ env:
 
 jobs:
   lint-format-test:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    environment: build
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -33,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Run tests and lint
-        uses: ./github/actions/tests
+        uses: ./.github/actions/tests
         with:
           silent_test: true
           fix_lint: true

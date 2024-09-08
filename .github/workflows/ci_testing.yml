@@ -13,7 +13,7 @@ on:
       - dev
       - dev-*
       - staging
-      - stagin-*
+      - staging-*
 
 jobs:
   lint-format-test:
@@ -34,7 +34,7 @@ jobs:
         shell: bash
 
       - name: Testing and linting
-        uses: ./github/actions/tests
+        uses: ./.github/actions/tests
         with:
           silent_test: false
           fix_lint: false
