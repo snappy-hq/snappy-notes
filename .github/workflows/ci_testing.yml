@@ -4,18 +4,12 @@ on:
   workflow_dispatch: 
   push:
     branches:
-      - dev
       - dev-*
-      - staging
-      - staging-*
     branches-ignore:
       - master
   pull_request:
     branches:
-      - dev
       - dev-*
-      - staging
-      - stagin-*
 
 jobs:
   lint-format-test:
