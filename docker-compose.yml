@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 
 services:
   web:
@@ -14,8 +14,8 @@ services:
       - snappy-network
     environment:
       NODE_ENV: production
-      DATABASE_URL: postgres://postgres:postgres@postgres_db:5432/snappy-notes
-      MONGO_URL: mongodb://mongo_db:27017/snappy-notes
+      PG_DB_URL: postgres://snappy:snappy_v1@postgres_db:5555/snappy-notes
+      MONGO_DB_URL: mongodb://root:password@mongo_db:27017/
 
   postgres_db:
     image: postgres:15-alpine
@@ -23,13 +23,13 @@ services:
     ports:
       - "5555:5432"
     volumes:
-      - ./db_data/pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     networks:
       - snappy-network
     environment:
       POSTGRES_DB: snappy-notes
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: snappy
+      POSTGRES_PASSWORD: snappy_v1
 
   mongo_db:
     image: mongo:4.0-xenial
@@ -37,16 +37,19 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./db_data/mongo_data:/data/db
+      - mongo_data:/data/db
     networks:
       - snappy-network
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
     
+volumes:
+  pgdata:
+    driver: local
+  mongo_data:
+    driver: local
+
 networks:
   snappy-network:
     driver: bridge
