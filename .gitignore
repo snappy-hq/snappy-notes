@@ -3,6 +3,9 @@
 # self hosted runner
 actions-runner
 
+# db
+db_data
+
 # dependencies
 /node_modules
 /.pnp
