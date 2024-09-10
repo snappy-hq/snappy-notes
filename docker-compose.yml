@@ -9,27 +9,27 @@ services:
       - postgres_db
       - mongo_db
     ports:
-      - "80:3000"
+      - "3000:3000"
     networks:
       - snappy-network
     environment:
       NODE_ENV: production
-      DATABASE_URL: postgres://snappy:snappy_postgres@postgres_db:5432/snappy-notes
+      DATABASE_URL: postgres://postgres:postgres@postgres_db:5432/snappy-notes
       MONGO_URL: mongodb://mongo_db:27017/snappy-notes
 
   postgres_db:
     image: postgres:15-alpine
     restart: always
     ports:
-      - "5432:5432"
+      - "5555:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - ./db_data/pgdata:/var/lib/postgresql/data
     networks:
       - snappy-network
     environment:
       POSTGRES_DB: snappy-notes
-      POSTGRES_USER: snappy
-      POSTGRES_PASSWORD: snappy_postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
 
   mongo_db:
     image: mongo:4.0-xenial
@@ -37,13 +37,15 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - ./db_data/mongo_data:/data/db
     networks:
       - snappy-network
 
-volumes:
-  pgdata:
-  mongo_data:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
     
 networks:
   snappy-network:

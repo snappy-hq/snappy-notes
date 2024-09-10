@@ -4,9 +4,17 @@ on:
   push:
     branches:
       - master
+      - main
+      - release
+      - release-*
+      - v*
   pull_request:
     branches:
       - master
+      - main
+      - release
+      - release-*
+      - v*
 
 env:
   HUSKY: 0
