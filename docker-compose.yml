@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   web:
     build:
@@ -44,10 +42,21 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
     
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    networks:
+      - snappy-network
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
 volumes:
   pgdata:
     driver: local
   mongo_data:
+    driver: local
+  jenkins_home:
     driver: local
 
 networks:
