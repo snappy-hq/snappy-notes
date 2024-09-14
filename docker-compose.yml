@@ -46,10 +46,12 @@ services:
     image: jenkins/jenkins:lts
     ports:
       - "8080:8080"
+      - "50000:50000"
     networks:
       - snappy-network
     volumes:
       - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   pgdata:
