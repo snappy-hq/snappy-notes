@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+			docker {
+				image 'node:20'
+			}
+		}
 
     environment {
         CI = 'true'
@@ -11,15 +15,6 @@ pipeline {
     }
 
     stages {
-				stage('Install nodejs') {
-						steps {
-								sh 'sudo apt-get install -y curl'
-								sh 'curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | sudo -E bash -'
-								sh 'sudo apt-get install -y nodejs'
-								sh 'node -v'
-						}
-				}
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
