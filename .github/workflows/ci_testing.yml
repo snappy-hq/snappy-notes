@@ -2,20 +2,9 @@ name: CI_DEV
 
 on:
   workflow_dispatch:
-  push:
-    branches-ignore:
-      - master
-      - main
-      - release
-      - release-*
-      - v*
   pull_request:
     branches:
-      - main
-      - master
-      - dev
-      - dev-*
-      - feature-*
+      - "*"
 
 jobs:
   lint-format-test:
