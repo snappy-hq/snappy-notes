@@ -2,18 +2,9 @@ name: CI_DEV
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - dev
-      - dev-*
-      - staging
-      - staging-*
   pull_request:
     branches:
-      - dev
-      - dev-*
-      - staging
-      - staging-*
+      - "*"
 
 jobs:
   lint-format-test:
