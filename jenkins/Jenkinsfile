@@ -11,6 +11,16 @@ pipeline {
     }
 
     stages {
+				stage('Install nodejs') {
+						steps {
+								sh 'apt-get install -y curl'
+								sh 'curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh'
+								sh 'bash nodesource_setup.sh'
+								sh 'apt-get install -y nodejs'
+								sh 'node -v'
+						}
+				}
+
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
