@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+
+    environment {
+        CI = 'true'
+        NODE_VERSION = '16'
+    }
+
+    parameters {
+        booleanParam(name: 'FIX_LINT', defaultValue: false, description: 'Fix linting errors')
+        booleanParam(name: 'SILENT_TEST', defaultValue: false, description: 'Run tests in silent mode')
+    }
+
+    stages {
+        stage('Install Node.js') {
+            steps {
+                script {
+                    sh 'curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | sudo -E bash -'
+                    sh 'sudo apt-get install -y nodejs'
+                }
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Prettier') {
+            steps {
+                sh 'npm run format'
+            }
+        }
+
+        stage('Run ESLint') {
+            steps {
+                script {
+                    if (params.FIX_LINT) {
+                        sh 'npm run lint:fix'
+                    } else {
+                        sh 'npm run lint'
+                    }
+                }
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                script {
+                    if (params.SILENT_TEST) {
+                        sh 'npm run test:silent'
+                    } else {
+                        sh 'npm run test'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/test-results.xml', allowEmptyArchive: true
+        }
+    }
+}
