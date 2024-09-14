@@ -14,15 +14,6 @@ pipeline {
     }
 
     stages {
-        stage('Install Node.js') {
-            steps {
-                script {
-                    sh 'curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | sudo -E bash -'
-                    sh 'apt-get install -y nodejs'
-                }
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
