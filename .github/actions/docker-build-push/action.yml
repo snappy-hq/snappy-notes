@@ -27,7 +27,8 @@ runs:
     - name: Build Docker image
       run: |
         VERSION=$(git rev-list --count HEAD)
-        docker build -t ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION} .
+        docker build -t ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION} \
+        --file ./docker/dockerfile
       shell: bash
 
     - name: Push Docker image
