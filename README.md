@@ -1,9 +1,3 @@
----
-Repository Link: https://github.com/dtg-lucifer/snappy-notes
-share_link: https://share.note.sx/f6ox8dr5#G5yYDVK6JSGpi+mJQLC5vSqy2QKSdRCp7QE+uD+jNeY
-share_updated: 2024-06-30T13:44:43+05:30
----
-
 # Objective:
 
 The main objective of creating such app is to have both the benefits of the note taking apps available on the market such as **_OneNote_**, **_Obsidian_**, **_Excallidraw_**. Where the rich text editor like apps such as the **_Obsidian_** is based on the Markdown language for taking the notes on itself, on the other hand **_OneNote_** is based on pure rich text editing provided by Microsoft itself but the drawing and sketching performance of both apps is not as good as the **_Excallidraw_**. But also **_Excallidraw_** can't handle the notebook management as like the other two apps can do. So keeping all of those benefits in a single place is the basic objective of this project.
