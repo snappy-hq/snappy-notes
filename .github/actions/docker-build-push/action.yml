@@ -33,6 +33,6 @@ runs:
 
     - name: Push Docker image
       run: |
-        VERSION=$(git rev-list --count HEAD)
+        VERSION=$(git rev-parse --short HEAD)
         docker push ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION}
       shell: bash
