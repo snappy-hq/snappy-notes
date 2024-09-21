@@ -13,6 +13,7 @@ import { MenuBar } from "./menubar";
 import { BubbleMenuTipTap } from "./bubblemenu";
 import { FloatingMenuTipTap } from "./floatingmenu";
 import { content } from "./defaultcontent";
+import { ThemeToggle } from "../ui/themeToggle";
 
 export function MDEditor() {
   const editor = useEditor({
@@ -33,18 +34,24 @@ export function MDEditor() {
         },
       }),
       Code,
-      CodeBlock,
+      CodeBlock.configure({ exitOnArrowDown: true }),
       Color,
     ],
     content,
     enableCoreExtensions: true,
+    autofocus: true,
+    coreExtensionOptions: {
+      clipboardTextSerializer: {
+        blockSeparator: "\n",
+      },
+    },
   });
 
   return (
-    <div>
+    <div className="mx-auto py-4 w-[min(90%,60rem)]">
       {editor && <BubbleMenuTipTap editor={editor} />}
       {editor && <FloatingMenuTipTap editor={editor} />}
-      {editor && <MenuBar editor={editor} />}
+      {/* {editor && <MenuBar editor={editor} />} */}
       <EditorContent editor={editor} controls contextMenu="default" />
     </div>
   );
