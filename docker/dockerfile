@@ -12,6 +12,7 @@ RUN npm run build
 
 FROM node:alpine AS publish
 LABEL maintainer="Piush Bose <dev.bosepiush@gmail.com>"
+LABEL github="https://github.com/snappy-hq/snappy-notes"
 
 WORKDIR /src
 

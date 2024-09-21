@@ -1,5 +1,6 @@
 {
 	"yaml.schemas": {
 		"https://json.schemastore.org/github-action.json": "file:///c%3A/Users/devbo/OneDrive/Documents/Programming/Projects/snappy-notes/.github/actions/tests/action.yml"
-	}
+	},
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }
