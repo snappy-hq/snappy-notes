@@ -26,7 +26,7 @@ runs:
 
     - name: Build Docker image
       run: |
-        VERSION=$(git rev-list --count HEAD)
+        VERSION=$(git rev-parse --short HEAD)
         docker build -t ${{ inputs.docker_registry }}/${{ inputs.repository }}:${VERSION} \
         --file ./docker/dockerfile .
       shell: bash
