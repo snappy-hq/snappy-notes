@@ -15,6 +15,12 @@ db_data
 # testing
 /coverage
 
+# terraform
+**/.terraform
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+
 # next.js
 /.next/
 /out/
