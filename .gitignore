@@ -20,6 +20,7 @@ db_data
 **/*.tfstate
 **/*.tfstate.*
 **/*.tfvars
+**/plans
 
 # next.js
 /.next/
