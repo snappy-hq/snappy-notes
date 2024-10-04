@@ -9,11 +9,12 @@ import Paragraph from "@tiptap/extension-paragraph";
 import Heading from "@tiptap/extension-heading";
 import CodeBlock from "@tiptap/extension-code-block";
 import Code from "@tiptap/extension-code";
-import { MenuBar } from "./menubar";
 import { BubbleMenuTipTap } from "./bubblemenu";
-import { FloatingMenuTipTap } from "./floatingmenu";
 import { content } from "./defaultcontent";
-import { ThemeToggle } from "../ui/themeToggle";
+
+// TODO needed in future updates
+// import { MenuBar } from "./menubar";
+// import { FloatingMenuTipTap } from "./floatingmenu";
 
 export function MDEditor() {
   const editor = useEditor({
@@ -49,9 +50,15 @@ export function MDEditor() {
 
   return (
     <div className="mx-auto py-4 w-[min(90%,60rem)]">
+
       {editor && <BubbleMenuTipTap editor={editor} />}
-      {editor && <FloatingMenuTipTap editor={editor} />}
+
+      {/* TODO Implement this  */}
+      {/* {editor && <FloatingMenuTipTap editor={editor} />} */}
+
+      {/* TODO Implement this, make this optional os that user can enable this or disable this as they like this to be */}
       {/* {editor && <MenuBar editor={editor} />} */}
+
       <EditorContent editor={editor} controls contextMenu="default" />
     </div>
   );

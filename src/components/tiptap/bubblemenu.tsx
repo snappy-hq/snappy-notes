@@ -2,7 +2,7 @@ import { BubbleMenu, Editor } from "@tiptap/react";
 import { Button } from "../ui/button";
 
 export const BubbleMenuTipTap = ({ editor }: { editor: Editor }) => (
-  <BubbleMenu tippyOptions={{ duration: 100 }} editor={editor}>
+  <BubbleMenu tippyOptions={{ duration: 3 }} editor={editor}>
     <Button
       onClick={() => editor.chain().focus().toggleBold().run()}
       className={editor.isActive("bold") ? "is-active" : ""}
@@ -18,7 +18,7 @@ export const BubbleMenuTipTap = ({ editor }: { editor: Editor }) => (
     <Button
       onClick={() => editor.chain().focus().toggleStrike().run()}
       className={editor.isActive("strike") ? "is-active" : ""}
-      // disabled={!editor.isActive("strike")}
+      // disabled={editor.isActive("strike")}
     >
       Strike
     </Button>
