@@ -2,12 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "FiraMonoRegular";
+  font-weight: 400;
+  src: url("/fonts/FiraMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "FiraMonoMedium";
+  font-weight: 500;
+  src: url("/fonts/FiraMono-Medium.ttf");
+}
+
+@font-face {
+  font-family: "FiraMonoBold";
+  font-weight: 700;
+  src: url("/fonts/FiraMono-Bold.ttf");
+}
+
 @layer own_theme {
   :root {
     --_theme_accent_color: hsl(28, 94%, 75%);
     --_border_radius_s: 0.3rem;
     --_border_radius_md: 0.5rem;
     --_border_radius_l: 0.7rem;
+    --_font_firacode_regular: "FiraMonoRegular", monospace;
+    --_font_firacode_medium: "FiraMonoMedium", monospace;
+    --_font_firacode_bold: "FiraMonoBold", monospace;
   }
 }
 
@@ -88,9 +109,12 @@
 }
 
 .tiptap {
-  :first-child {
-    margin-top: 0;
+  @media screen and (width < 768px) {
+    :first-child {
+      margin-top: 0;
+    }
   }
+
 
   //! Important
   outline: none;
@@ -108,6 +132,10 @@
     }
   }
 
+  p {
+    text-wrap: pretty;
+  }
+
   /* Heading styles */
   h1,
   h2,
@@ -119,6 +147,7 @@
     margin-top: 2.5rem;
     text-wrap: pretty;
     font-weight: bold;
+    color: var(--_theme_accent_color);
   }
 
   h1,
@@ -149,22 +178,21 @@
   code {
     background-color: hsl(0, 0%, 15%);
     border-radius: calc(var(--_border_radius_s) + 0.1rem);
-    color: whitesmoke;
-    font-size: 0.85rem;
-    padding: 0.25em 0.3em;
+    color: var(--_theme_accent_color);
+    font-size: 1rem;
+    font-family: var(--_font_firacode_regular);
   }
 
   pre {
     background: hsl(0, 0%, 15%);
     border-radius: var(--_border_radius_md);
-    color: whitesmoke;
-    font-family: "JetBrainsMono", monospace;
+    color: var(--_theme_accent_color);
+    font-family: var(--_font_firacode_regular);
     margin: 1.5rem 0;
-    padding: 0.75rem 1rem;
 
     code {
-      font-size: 0.8rem;
-      padding: 0;
+      font-size: 1rem;
+      font-family: var(--_font_firacode_regular);
     }
   }
 

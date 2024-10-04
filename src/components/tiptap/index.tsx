@@ -10,13 +10,13 @@ import Heading from "@tiptap/extension-heading";
 import CodeBlock from "@tiptap/extension-code-block";
 import Code from "@tiptap/extension-code";
 import { BubbleMenuTipTap } from "./bubblemenu";
-import { content } from "./defaultcontent";
+import { content as defaultContent } from "./defaultcontent";
 
 // TODO needed in future updates
 // import { MenuBar } from "./menubar";
 // import { FloatingMenuTipTap } from "./floatingmenu";
 
-export function MDEditor() {
+export function MDEditor({ content = defaultContent }: { content?: string }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -50,7 +50,6 @@ export function MDEditor() {
 
   return (
     <div className="mx-auto py-4 w-[min(90%,60rem)]">
-
       {editor && <BubbleMenuTipTap editor={editor} />}
 
       {/* TODO Implement this  */}
