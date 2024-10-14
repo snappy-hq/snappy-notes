@@ -8,22 +8,27 @@ import StarterKit from "@tiptap/starter-kit";
 import Paragraph from "@tiptap/extension-paragraph";
 import Heading from "@tiptap/extension-heading";
 import CodeBlock from "@tiptap/extension-code-block";
-import Code from "@tiptap/extension-code";
-import { BubbleMenuTipTap } from "./bubblemenu";
-import { content as defaultContent } from "./defaultcontent";
+import { CodeBlockLowlight } from "@tiptap/extension-code-block-lowlight";
+import { content as defaultContent } from "./utils/defaultcontent";
+import { lowlight as highlighter } from "./utils/lowlight";
 
 // TODO needed in future updates
-// import { MenuBar } from "./menubar";
-// import { FloatingMenuTipTap } from "./floatingmenu";
+// import { MenuBar } from "./menu/menubar";
+// import { FloatingMenuTipTap } from "./menu/floatingmenu";
+// import { BubbleMenuTipTap } from "./menu/bubblemenu";
 
 export function MDEditor({ content = defaultContent }: { content?: string }) {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({
+        codeBlock: false,
+      }),
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),
-      Highlight,
+      Highlight.configure({
+        multicolor: true,
+      }),
       Paragraph.configure({
         HTMLAttributes: {
           class: "tiptap__para",
@@ -34,8 +39,14 @@ export function MDEditor({ content = defaultContent }: { content?: string }) {
           class: "tiptap__heading",
         },
       }),
-      Code,
-      CodeBlock.configure({ exitOnArrowDown: true }),
+      CodeBlock.configure({
+        exitOnArrowDown: true,
+        exitOnTripleEnter: true,
+        languageClassPrefix: "language-",
+      }),
+      CodeBlockLowlight.configure({
+        lowlight: highlighter,
+      }),
       Color,
     ],
     content,
@@ -50,12 +61,12 @@ export function MDEditor({ content = defaultContent }: { content?: string }) {
 
   return (
     <div className="mx-auto py-4 w-[min(90%,60rem)]">
-      {editor && <BubbleMenuTipTap editor={editor} />}
+      {/* {editor && <BubbleMenuTipTap editor={editor} />} */}
 
-      {/* TODO Implement this  */}
+      {/* // TODO Implement this  */}
       {/* {editor && <FloatingMenuTipTap editor={editor} />} */}
 
-      {/* TODO Implement this, make this optional os that user can enable this or disable this as they like this to be */}
+      {/* // TODO Implement this, make this optional os that user can enable this or disable this as they like this to be */}
       {/* {editor && <MenuBar editor={editor} />} */}
 
       <EditorContent editor={editor} controls contextMenu="default" />

@@ -1,5 +1,5 @@
 import { BubbleMenu, Editor } from "@tiptap/react";
-import { Button } from "../ui/button";
+import { Button } from "~/components/ui/button";
 
 export const BubbleMenuTipTap = ({ editor }: { editor: Editor }) => (
   <BubbleMenu tippyOptions={{ duration: 3 }} editor={editor}>

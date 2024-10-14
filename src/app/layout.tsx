@@ -4,8 +4,10 @@ import { Poppins } from "next/font/google";
 import { ThemeProvider } from "~/components/theme/provider";
 
 import "./globals.scss";
+import "../styles/tiptap.scss";
+import { Sheet } from "~/components/ui/sheet";
 
-const inter = Poppins({ weight: "400", subsets: ["latin", "latin-ext"] });
+const poppins = Poppins({ weight: "400", subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,14 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Sheet>{children}</Sheet>
         </ThemeProvider>
       </body>
     </html>
