@@ -1,12 +1,12 @@
 import { all, createLowlight } from "lowlight";
 
-import bash from "highlight.js/lib/languages/bash.js";
-import yaml from "highlight.js/lib/languages/yaml.js";
-import md from "highlight.js/lib/languages/markdown.js";
+import bash from "highlight.js/lib/languages/bash";
+import yaml from "highlight.js/lib/languages/yaml";
+import md from "highlight.js/lib/languages/markdown";
 
 const lowlight = createLowlight(all);
 
-//? languages 
+//? languages
 lowlight.register("bash", bash);
 lowlight.register("yaml", yaml);
 lowlight.register("markdown", md);

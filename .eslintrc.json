@@ -44,6 +44,7 @@
     ],
     "no-console": "warn",
     "react/jsx-props-no-spreading": "off"
+    // "@typescript-eslint/quotes": ["warn", "single"]
   },
   "settings": {
     "react": {

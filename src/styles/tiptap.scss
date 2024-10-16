@@ -72,13 +72,13 @@
   }
 
   pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     background: hsl(0, 0%, 15%);
     border-radius: var(--_border_radius_md);
     margin: 1.5rem 0;
     padding: 1rem 2rem;
     code {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-family: var(--_font_firacode_regular);
     }
   }
@@ -93,7 +93,7 @@
 
     .hljs {
       display: block;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
 
     .hljs-comment,

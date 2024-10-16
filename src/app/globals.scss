@@ -22,10 +22,22 @@
   font-variant-ligatures: common-ligatures;
   src: url("/fonts/FiraMono-Bold.ttf");
 }
+@font-face {
+  font-family: "ArchitectsDaughter";
+  font-weight: 400;
+  font-variant-ligatures: common-ligatures;
+  src: url("/fonts/ArchitectsDaughter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Signature";
+  src: url("/fonts/DarlingtonDemo-z8xjG.ttf");
+}
 
 @layer own_theme {
   :root {
     --_theme_accent_color: hsl(28, 94%, 75%);
+    --_theme_accent_color_rgb: rgb(251, 187, 131);
     --_border_radius_s: 0.3rem;
     --_border_radius_md: 0.5rem;
     --_border_radius_l: 0.7rem;
@@ -72,8 +84,9 @@
   }
 
   .dark {
-    --background: 0, 0%, 7%;
-    --foreground: 0, 15%, 83%;
+    --background: hsl(0, 0%, 15%);
+    --foreground: hsl(0, 15%, 83%);
+    --foreground_rgb: rgb(218, 205, 205);
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -108,5 +121,21 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  img {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--_theme_accent_color);
+  }
+  .bg-accent {
+    background-color: var(--_theme_accent_color);
+  }
+  .bg-foreground {
+    background-color: rgb(from var(--foreground_rgb) r g b);
   }
 }
