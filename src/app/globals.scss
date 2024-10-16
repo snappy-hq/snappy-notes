@@ -84,7 +84,7 @@
   }
 
   .dark {
-    --background: hsl(0, 0%, 15%);
+    --background: hsl(0, 0%, 12%);
     --foreground: hsl(0, 15%, 83%);
     --foreground_rgb: rgb(218, 205, 205);
 
@@ -137,5 +137,8 @@
   }
   .bg-foreground {
     background-color: rgb(from var(--foreground_rgb) r g b);
+  }
+  .bg-default {
+    background-color: var(--background);
   }
 }

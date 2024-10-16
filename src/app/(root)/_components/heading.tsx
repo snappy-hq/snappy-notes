@@ -21,7 +21,7 @@ const HeroHeading = () => {
         className="md:mx-auto w-max"
         onClick={() => router.push("/notes")}
       >
-        Get Started
+        Create your first note
         <ArrowRight className="ml-2 w-4 h-4" />
       </Button>
     </header>

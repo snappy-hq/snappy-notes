@@ -40,11 +40,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full scrollbar-thin scrollbar-track-transparent"
+      className="scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full scrollbar-none scrollbar-track-transparent"
     >
       <body className={poppins.className}>
         <ThemeProvider storageKey="snappy-theme">
-          <main className="flex min-w-screen min-h-screen">{children}</main>
+          <main className="flex bg-default min-w-screen min-h-screen">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
