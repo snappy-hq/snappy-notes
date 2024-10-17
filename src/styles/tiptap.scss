@@ -177,6 +177,17 @@
     height: 0;
     pointer-events: none;
   }
+
+  @media (prefers-color-scheme: light) {
+    code,
+    pre {
+      background-color: var(--foreground);
+    }
+
+    pre {
+      border: 1px solid var(--foreground);
+    }
+  }
 }
 
 /* Bubble menu */
