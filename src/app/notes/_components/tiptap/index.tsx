@@ -1,16 +1,11 @@
 "use client";
 
-import { Color } from "@tiptap/extension-color";
-import TextAlign from "@tiptap/extension-text-align";
-import Highlight from "@tiptap/extension-highlight";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import Paragraph from "@tiptap/extension-paragraph";
-import Heading from "@tiptap/extension-heading";
-import CodeBlock from "@tiptap/extension-code-block";
-import { CodeBlockLowlight } from "@tiptap/extension-code-block-lowlight";
 import { content as defaultContent } from "./utils/defaultcontent";
-import { lowlight as highlighter } from "./utils/lowlight";
+import { CustomCodeBlock, HighlightedCodeBlock } from "./extensions";
+import { TypographyExtensions } from "./extensions";
+import { ExternalElements } from "./extensions";
 
 // TODO needed in future updates
 // import { MenuBar } from "./menu/menubar";
@@ -23,31 +18,10 @@ export function MDEditor({ content = defaultContent }: { content?: string }) {
       StarterKit.configure({
         codeBlock: false,
       }),
-      TextAlign.configure({
-        types: ["heading", "paragraph"],
-      }),
-      Highlight.configure({
-        multicolor: true,
-      }),
-      Paragraph.configure({
-        HTMLAttributes: {
-          class: "tiptap__para",
-        },
-      }),
-      Heading.configure({
-        HTMLAttributes: {
-          class: "tiptap__heading",
-        },
-      }),
-      CodeBlock.configure({
-        exitOnArrowDown: true,
-        exitOnTripleEnter: true,
-        languageClassPrefix: "language-",
-      }),
-      CodeBlockLowlight.configure({
-        lowlight: highlighter,
-      }),
-      Color,
+      CustomCodeBlock,
+      HighlightedCodeBlock,
+      ...TypographyExtensions,
+      ...ExternalElements,
     ],
     content,
     enableCoreExtensions: true,
