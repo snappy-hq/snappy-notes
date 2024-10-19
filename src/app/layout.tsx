@@ -3,7 +3,8 @@ import { Poppins } from "next/font/google";
 
 import "./globals.scss";
 import "../styles/tiptap.scss";
-import { ThemeProvider } from "../components/providers/theme-provider";
+
+import { ThemeProvider } from "~/components/providers/theme-provider";
 import { ClerkClientProvider } from "~/components/providers/clerk-provider";
 
 const poppins = Poppins({

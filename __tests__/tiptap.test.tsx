@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { MDEditor } from "../src/app/_components/tiptap/indexindex";
-import { MenuBar } from "../src/app/_components/tiptap/menubarnubar";
+import { MDEditor } from "~/app/notes/_components/tiptap";
+import { MenuBar } from "~/app/notes/_components/tiptap/menu/menubar";
 
 describe("MDEditor component test with all necessary sub-components", () => {
   it("renders the component correctly", () => {
