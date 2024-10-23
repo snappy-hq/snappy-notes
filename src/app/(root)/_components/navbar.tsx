@@ -13,15 +13,18 @@ import {
   SignInButton,
   SignUpButton,
   UserButton,
+  useSession,
 } from "@clerk/clerk-react";
 import { Button } from "~/components/ui/button";
 import Loader from "~/components/ui/loader";
 import { useTheme } from "next-themes";
 import { dark, experimental__simple } from "@clerk/themes";
+import Link from "next/link";
 
 const Navbar = () => {
   const scrolled = useScrollTop();
   const { resolvedTheme } = useTheme();
+  const { isSignedIn, isLoaded } = useSession();
   return (
     <nav
       className={cn(
@@ -50,13 +53,22 @@ const Navbar = () => {
             </SignUpButton>
           </SignedOut>
           <SignedIn>
+            {isSignedIn && isLoaded && (
+              <Button
+                asChild
+                size={"sm"}
+                variant={"ghost"}
+                className="md:inline-flex hidden"
+              >
+                <Link href={"/notes"}>Enter Snappy notes</Link>
+              </Button>
+            )}
             <UserButton
               appearance={{
                 baseTheme:
                   resolvedTheme === "dark" ? dark : experimental__simple,
               }}
               userProfileMode="modal"
-              showName
             />
           </SignedIn>
         </ClerkLoaded>

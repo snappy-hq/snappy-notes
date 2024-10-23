@@ -66,6 +66,7 @@
     "react-dom": "^18",
     "remark-gfm": "^4.0.0",
     "sass": "^1.77.6",
+    "svix": "^1.37.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
